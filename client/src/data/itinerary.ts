@@ -310,7 +310,7 @@ export const itineraryData: DayItinerary[] = [
     title: "告别红海,返回开罗",
     description: "享受最后一个悠闲的上午后,驱车5小时返回开罗,再次穿越壮丽的东部沙漠。",
     transport: "乘车返回开罗,约5小时,沿途欣赏红海海岸线、沙漠山脉和笔直公路构成的壮美画卷",
-    images: ["/images/red-sea-desert-landscape.png"]
+    images: ["/images/hurghada-cairo-desert-road.jpg"]
   },
   {
     day: 9,

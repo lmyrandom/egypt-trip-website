@@ -374,7 +374,7 @@ export default function Home() {
             </div>
             <div className="order-1 md:order-2">
               <img 
-                src="/images/new-cairo-shopping-district.png" 
+                src="/images/new-cairo-citystars-mall.jpg" 
                 alt="New Cairo Shopping" 
                 className="rounded-lg shadow-2xl w-full h-auto"
               />
