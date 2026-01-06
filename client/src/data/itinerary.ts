@@ -296,7 +296,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "酒店躺平",
         description: "在私人海滩的躺椅上读书,在清澈泳池中畅游,或在海滨酒吧点一杯饮品,静静欣赏海天一色。",
-        image: "/images/red-sea-snorkeling.png"
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsZY40lJFJRsFHSKNQ0TFKgRavpIGx4pxaXQ&s"
       }
     ],
     hotel: {
@@ -310,14 +310,7 @@ export const itineraryData: DayItinerary[] = [
     title: "告别红海,返回开罗",
     description: "享受最后一个悠闲的上午后,驱车5小时返回开罗,再次穿越壮丽的东部沙漠。",
     transport: "乘车返回开罗,约5小时,沿途欣赏红海海岸线、沙漠山脉和笔直公路构成的壮美画卷",
-    activities: [
-      {
-        name: "新开罗购物",
-        description: "在现代化购物中心(如Cairo Festival City Mall)进行最后的购物,购买纸莎草画、香精和手工艺品作为纪念.",
-        image: "/images/new-cairo-shopping-district.png"
-      }
-    ],
-    images: ["/images/new-cairo-shopping-district.png"]
+    images: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsZY40lJFJRsFHSKNQ0TFKgRavpIGx4pxaXQ&s"]
   },
   {
     day: 9,
