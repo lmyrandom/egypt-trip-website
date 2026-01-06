@@ -132,7 +132,7 @@ export default function Home() {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-primary/10 to-background">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-primary/10 to-background">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -140,18 +140,18 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="container max-w-4xl mx-auto"
         >
-          <div className="bg-card/60 backdrop-blur-md rounded-lg p-8 md:p-12 shadow-2xl border border-primary/30">
+          <div className="bg-card/60 backdrop-blur-md rounded-lg p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl border border-primary/30">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8 text-foreground" style={{fontFamily: "'Playfair Display', serif"}}>
             欢迎踏上这场奢华的埃及之旅
           </h2>
-            <div className="space-y-4 text-foreground/80 leading-relaxed">
+            <div className="space-y-3 sm:space-y-4 text-foreground/80 leading-relaxed text-sm sm:text-base">
               <p>
                 亲爱的旅伴们,我们即将一同踏上一片古老而神秘的土地,亲身感受横跨七千年的璀璨文明。在这趟精心策划的旅程中,我们将站在雄伟的金字塔脚下,仰望法老的智慧与永恒;漫步于宏伟的神庙廊柱之间,聆听众神与英雄的古老传说;乘坐传统风帆船,在尼罗河的金色日落下悠然漂流;最后,我们还将在红海的蔚蓝怀抱中,与海豚共舞,享受悠闲的度假时光。
               </p>
               <p>
                 从开罗的千年古韵到阿斯旺的静谧风光,从卢克索的露天博物馆到赫尔嘎达的碧海金沙,每一站都经过精心安排。除赫尔嘎达躺平日外,全程配备中文导游讲解历史并陪同,全程Toyota HIACE商务车,确保您的舒适与安全。
               </p>
-              <p className="font-semibold text-accent text-lg text-center mt-8">
+              <p className="font-semibold text-accent text-base sm:text-lg text-center mt-6 sm:mt-8">
                 请放松心情,带上您的好奇心与探索精神。让我们共同期待,在这片充满奇迹的土地上,创造属于我们自己的美好回忆!
               </p>
             </div>
@@ -160,13 +160,13 @@ export default function Home() {
       </section>
 
       {/* Itinerary Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-background to-primary/5">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-background to-primary/5">
         <div className="container max-w-6xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 sm:mb-4 text-foreground"
           >
             详细行程安排
           </motion.h2>
@@ -174,12 +174,12 @@ export default function Home() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-center text-foreground/60 mb-16 text-lg"
+            className="text-center text-foreground/60 mb-8 sm:mb-12 md:mb-16 text-sm sm:text-base md:text-lg"
           >
             每一天都精心设计,每一刻都值得期待
           </motion.p>
 
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {itineraryData.map((day, index) => (
               <DayCard key={day.day} {...day} index={index} />
             ))}
@@ -188,115 +188,115 @@ export default function Home() {
       </section>
 
       {/* Travel Tips Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-primary/10 to-background">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-primary/10 to-background">
         <div className="container max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-card/60 backdrop-blur-md rounded-lg p-8 md:p-12 shadow-2xl border border-primary/30"
+            className="bg-card/60 backdrop-blur-md rounded-lg p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl border border-primary/30"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8 md:mb-12 text-foreground">
               出行准备清单
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-accent mb-4 flex items-center gap-2 uppercase tracking-wide">
+                <h3 className="text-lg sm:text-xl font-semibold text-accent mb-3 sm:mb-4 flex items-center gap-2 uppercase tracking-wide">
                   <span>📋</span> 重要证件
                 </h3>
-                <ul className="space-y-3 text-foreground/80">
+                <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-foreground/80">
                   <li className="flex items-start gap-3">
-                    <span className="text-accent mt-1">▸</span>
+                    <span className="text-accent mt-1 flex-shrink-0">▸</span>
                     <span>护照及复印件</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-accent mt-1">▸</span>
+                    <span className="text-accent mt-1 flex-shrink-0">▸</span>
                     <span>埃及签证(电子或贴纸)</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-accent mt-1">▸</span>
+                    <span className="text-accent mt-1 flex-shrink-0">▸</span>
                     <span>机票及酒店确认单</span>
                   </li>
                 </ul>
 
-                <h3 className="text-xl font-semibold text-accent mb-4 mt-8 flex items-center gap-2 uppercase tracking-wide">
+                <h3 className="text-lg sm:text-xl font-semibold text-accent mb-3 sm:mb-4 mt-6 sm:mt-8 flex items-center gap-2 uppercase tracking-wide">
                   <span>👕</span> 衣物装备
                 </h3>
-                <ul className="space-y-3 text-foreground/80">
+                <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-foreground/80">
                   <li className="flex items-start gap-3">
-                    <span className="text-accent mt-1">▸</span>
+                    <span className="text-accent mt-1 flex-shrink-0">▸</span>
                     <span>轻便外套(早晚温差大)</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-accent mt-1">▸</span>
+                    <span className="text-accent mt-1 flex-shrink-0">▸</span>
                     <span>T恤、长裤、连衣裙</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-accent mt-1">▸</span>
+                    <span className="text-accent mt-1 flex-shrink-0">▸</span>
                     <span>泳衣(赫尔嘎达必备)</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-accent mt-1">▸</span>
+                    <span className="text-accent mt-1 flex-shrink-0">▸</span>
                     <span>舒适的步行鞋和拖鞋</span>
                   </li>
                 </ul>
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-accent mb-4 flex items-center gap-2 uppercase tracking-wide">
+                <h3 className="text-lg sm:text-xl font-semibold text-accent mb-3 sm:mb-4 flex items-center gap-2 uppercase tracking-wide">
                   <span>☀️</span> 防晒用品
                 </h3>
-                <ul className="space-y-3 text-foreground/80">
+                <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-foreground/80">
                   <li className="flex items-start gap-3">
-                    <span className="text-accent mt-1">▸</span>
+                    <span className="text-accent mt-1 flex-shrink-0">▸</span>
                     <span>高倍数防晒霜(SPF 50+)</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-accent mt-1">▸</span>
+                    <span className="text-accent mt-1 flex-shrink-0">▸</span>
                     <span>太阳镜和遮阳帽</span>
                   </li>
                 </ul>
 
-                <h3 className="text-xl font-semibold text-accent mb-4 mt-8 flex items-center gap-2 uppercase tracking-wide">
+                <h3 className="text-lg sm:text-xl font-semibold text-accent mb-3 sm:mb-4 mt-6 sm:mt-8 flex items-center gap-2 uppercase tracking-wide">
                   <span>🎒</span> 个人用品
                 </h3>
-                <ul className="space-y-3 text-foreground/80">
+                <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-foreground/80">
                   <li className="flex items-start gap-3">
-                    <span className="text-accent mt-1">▸</span>
+                    <span className="text-accent mt-1 flex-shrink-0">▸</span>
                     <span>常用药品(肠胃药、感冒药)</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-accent mt-1">▸</span>
+                    <span className="text-accent mt-1 flex-shrink-0">▸</span>
                     <span>洗漱用品</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-accent mt-1">▸</span>
+                    <span className="text-accent mt-1 flex-shrink-0">▸</span>
                     <span>转换插头(欧标)和移动电源</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-accent mt-1">▸</span>
+                    <span className="text-accent mt-1 flex-shrink-0">▸</span>
                     <span>少量美元现金(用于小费)</span>
                   </li>
                 </ul>
               </div>
             </div>
 
-            <div className="mt-12 p-6 bg-accent/20 rounded-lg border border-accent/30">
-              <h3 className="text-xl font-semibold text-accent mb-4 flex items-center gap-2 uppercase tracking-wide">
+            <div className="mt-8 sm:mt-10 md:mt-12 p-4 sm:p-6 bg-accent/20 rounded-lg border border-accent/30">
+              <h3 className="text-lg sm:text-xl font-semibold text-accent mb-3 sm:mb-4 flex items-center gap-2 uppercase tracking-wide">
                 <span>✨</span> 特别提示
               </h3>
-              <ul className="space-y-3 text-foreground/80">
+              <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-foreground/80">
                 <li className="flex items-start gap-3">
-                  <span className="text-accent mt-1">•</span>
+                  <span className="text-accent mt-1 flex-shrink-0">•</span>
                   <span><strong>导游服务:</strong> 除赫尔嘎达躺平日外,全程配备中文导游讲解历史并陪同</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-accent mt-1">•</span>
+                  <span className="text-accent mt-1 flex-shrink-0">•</span>
                   <span><strong>交通工具:</strong> 全程Toyota HIACE商务车,舒适豪华</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-accent mt-1">•</span>
+                  <span className="text-accent mt-1 flex-shrink-0">•</span>
                   <span><strong>气候:</strong> 2月埃及气候宜人,白天温暖(25-28°C),早晚较凉(15-18°C),注意增减衣物</span>
                 </li>
               </ul>
