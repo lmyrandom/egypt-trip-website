@@ -196,7 +196,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "菲莱神庙",
         description: "乘船前往阿吉勒基亚岛,参观被誉为'尼罗河上的珍珠'的神庙,欣赏供奉女神伊西斯的精美浮雕。",
-        images: ["/images/Xo9Zei0ag6pK.jpg", "/images/philae-temple-1.jpg", "/images/philae-temple-aerial.jpg"]
+        images: ["/images/Xo9Zei0ag6pK.jpg", "/images/philae-temple-aerial.jpg"]
       },
       {
         name: "阿斯旺大坝",
@@ -211,7 +211,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "尼罗河日落游船",
         description: "乘坐传统白色风帆船Felucca,在金色日落中缓缓漂流,体验埃及最浪漫的时刻。",
-        images: ["/images/Cq9hJQfcCDuK.jpg", "/images/philae-temple-2.jpg", "/images/philae-temple-1.jpg"]
+        images: ["/images/Cq9hJQfcCDuK.jpg"]
       }
     ],
     hotel: {
@@ -311,7 +311,7 @@ export const itineraryData: DayItinerary[] = [
     title: "告别红海,返回开罗",
     description: "享受最后一个悠闲的上午后,驱车5小时返回开罗,再次穿越壮丽的东部沙漠。",
     transport: "乘车返回开罗,约5小时,沿途欣赏红海海岸线、沙漠山脉和笔直公路构成的壮美画卷",
-    images: ["/images/hurghada-cairo-desert-road.jpg"],
+    images: ["/images/desert-sea-mountain-view.jpg"],
     activities: [
       {
         name: "新开罗购物中心",

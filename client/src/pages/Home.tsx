@@ -349,7 +349,7 @@ export default function Home() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12">下载行程文档</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-accent to-primary rounded-lg p-8 shadow-2xl text-accent-foreground border border-accent/50">
+            <div className="bg-gradient-to-br from-accent to-primary rounded-lg p-8 shadow-2xl text-white border border-accent/50">
               <h3 className="text-2xl font-bold mb-4">行程小册子</h3>
               <p className="text-base mb-6 opacity-90">
                 完整的行程安排、酒店信息、交通详情和出行提示,方便随时查阅
@@ -363,10 +363,10 @@ export default function Home() {
                 }}
               >
                 <Download className="w-5 h-5 mr-2" />
-                查看行程小册子
+                查看小汪刘准备的贴心小信息
               </Button>
             </div>
-            <div className="bg-gradient-to-br from-primary to-accent rounded-lg p-8 shadow-2xl text-primary-foreground border border-primary/50">
+            <div className="bg-gradient-to-br from-primary to-accent rounded-lg p-8 shadow-2xl text-white border border-primary/50">
               <h3 className="text-2xl font-bold mb-4">景点导览指引</h3>
               <p className="text-base mb-6 opacity-90">
                 专业导游小汪刘的深度景点解说,包含历史故事、观赏建议和合影地点
@@ -380,7 +380,7 @@ export default function Home() {
                 }}
               >
                 <Download className="w-5 h-5 mr-2" />
-                查看景点导览指引
+                查看小汪刘准备的贴心小信息
               </Button>
             </div>
           </div>
