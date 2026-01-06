@@ -338,50 +338,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* New Cairo Shopping Section */}
-      <section className="py-16 sm:py-20 px-6 bg-gradient-to-b from-primary/5 to-background">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="container max-w-4xl mx-auto"
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-foreground mb-12">新开罗购物中心</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="order-2 md:order-1">
-              <h3 className="text-2xl font-semibold text-accent mb-4">返回开罗的最后购物机会</h3>
-              <p className="text-foreground/80 text-lg mb-4">
-                在返回香港前，我们将在新开罗现代化购物中心进行最后的购物。这是一个集高端品牌、传统工艺品和埃及特产于一身的购物天堂。
-              </p>
-              <ul className="space-y-3 text-foreground/80">
-                <li className="flex items-start gap-3">
-                  <span className="text-accent flex-shrink-0">🛍️</span>
-                  <span>国际品牌和埃及本地设计师品牌</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-accent flex-shrink-0">🎨</span>
-                  <span>传统纸莎草画和手工艺品</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-accent flex-shrink-0">🌿</span>
-                  <span>埃及香精和天然护肤品</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-accent flex-shrink-0">💎</span>
-                  <span>珍珠、宝石和黄金首饰</span>
-                </li>
-              </ul>
-            </div>
-            <div className="order-1 md:order-2">
-              <img 
-                src="/images/new-cairo-citystars-mall.jpg" 
-                alt="New Cairo Shopping" 
-                className="rounded-lg shadow-2xl w-full h-auto"
-              />
-            </div>
-          </div>
-        </motion.div>
-      </section>
 
       {/* Download PDF Section */}
       <section className="py-20 px-6 bg-gradient-to-b from-background to-primary/10">
