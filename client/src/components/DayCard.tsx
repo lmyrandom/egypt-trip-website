@@ -1,16 +1,42 @@
 /**
- * DayCard Component
- * Design: Nile River flowing narrative - organic rounded cards with flowing layout
- * Displays daily itinerary with images and descriptions
+ * DayCard Component - Luxury Egyptian Mystery Edition
+ * Design: Deep blacks, golds, and mysterious lighting
+ * Displays daily itinerary with flights, images, and descriptions
  */
 
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import FlightCard from "./FlightCard";
 
 interface Activity {
   name: string;
   description: string;
   image?: string;
+}
+
+interface Hotel {
+  name: string;
+  description: string;
+  image?: string;
+}
+
+interface Flight {
+  number: string;
+  airline: string;
+  departure: {
+    city: string;
+    code: string;
+    time: string;
+    date: string;
+  };
+  arrival: {
+    city: string;
+    code: string;
+    time: string;
+    date: string;
+  };
+  duration: string;
+  aircraft?: string;
 }
 
 interface DayCardProps {
@@ -19,11 +45,8 @@ interface DayCardProps {
   title: string;
   description: string;
   activities?: Activity[];
-  hotel?: {
-    name: string;
-    description: string;
-    image?: string;
-  };
+  hotel?: Hotel;
+  flights?: Flight[];
   transport?: string;
   images?: string[];
   index: number;
@@ -36,11 +59,11 @@ export default function DayCard({
   description,
   activities = [],
   hotel,
+  flights = [],
   transport,
   images = [],
   index
 }: DayCardProps) {
-  // Alternate left and right layout for flowing narrative
   const isEven = index % 2 === 0;
 
   return (
@@ -49,34 +72,47 @@ export default function DayCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center mb-20`}
+      className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-stretch mb-24`}
     >
-      {/* Day number badge */}
-      <div className="flex-shrink-0">
-        <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg">
+      {/* Day number badge - luxury gold styling */}
+      <div className="flex-shrink-0 flex items-center justify-center md:items-start">
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          className="w-28 h-28 md:w-32 md:h-32 rounded-lg bg-gradient-to-br from-accent via-primary to-accent flex items-center justify-center shadow-2xl border border-accent/50"
+        >
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-primary-foreground">Day</div>
-            <div className="text-4xl md:text-5xl font-bold text-primary-foreground">{day}</div>
+            <div className="text-sm md:text-base font-semibold text-primary-foreground tracking-widest">DAY</div>
+            <div className="text-5xl md:text-6xl font-bold text-accent-foreground">{day}</div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
-      {/* Content card */}
-      <Card className="flex-1 p-6 md:p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-card/80 backdrop-blur-sm">
+      {/* Content card - luxury dark styling */}
+      <Card className="flex-1 p-6 md:p-8 shadow-2xl bg-card/80 backdrop-blur-sm border border-primary/30 rounded-lg">
         <div className="space-y-6">
           {/* Header */}
-          <div>
-            <div className="text-sm text-muted-foreground mb-2 font-medium">{date}</div>
+          <div className="border-b border-primary/20 pb-4">
+            <div className="text-xs text-accent uppercase tracking-widest font-semibold mb-2">{date}</div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">{title}</h2>
             <p className="text-base md:text-lg text-foreground/80 leading-relaxed">{description}</p>
           </div>
 
+          {/* Flights */}
+          {flights.length > 0 && (
+            <div className="space-y-3">
+              <h3 className="text-lg font-semibold text-accent uppercase tracking-wide">✈️ 航班信息</h3>
+              {flights.map((flight, idx) => (
+                <FlightCard key={idx} flight={flight} index={idx} />
+              ))}
+            </div>
+          )}
+
           {/* Transport info */}
           {transport && (
-            <div className="bg-secondary/30 rounded-2xl p-4 border-l-4 border-accent">
-              <p className="text-sm font-medium text-secondary-foreground flex items-center gap-2">
+            <div className="bg-primary/20 rounded-lg p-4 border-l-4 border-accent">
+              <p className="text-sm font-medium text-foreground flex items-center gap-2">
                 <span className="text-lg">🚗</span>
-                {transport}
+                <span>{transport}</span>
               </p>
             </div>
           )}
@@ -89,13 +125,14 @@ export default function DayCard({
                   key={idx}
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
-                  className="relative overflow-hidden rounded-2xl shadow-md aspect-[4/3]"
+                  className="relative overflow-hidden rounded-lg shadow-lg aspect-[4/3] border border-primary/20"
                 >
                   <img
                     src={img}
                     alt={`${title} - Image ${idx + 1}`}
                     className="w-full h-full object-cover"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity" />
                 </motion.div>
               ))}
             </div>
@@ -103,45 +140,53 @@ export default function DayCard({
 
           {/* Activities */}
           {activities.length > 0 && (
-            <div className="space-y-4">
+            <div className="space-y-5 pt-4">
+              <h3 className="text-lg font-semibold text-accent uppercase tracking-wide">🏛️ 活动安排</h3>
               {activities.map((activity, idx) => (
-                <div key={idx} className="space-y-2">
-                  <h3 className="text-xl font-semibold text-foreground flex items-center gap-2">
-                    <span className="text-accent">•</span>
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  className="space-y-2 bg-primary/10 p-4 rounded-lg border border-primary/20"
+                >
+                  <h3 className="text-lg font-semibold text-accent flex items-center gap-2">
+                    <span className="w-2 h-2 bg-accent rounded-full" />
                     {activity.name}
                   </h3>
-                  <p className="text-foreground/70 leading-relaxed pl-6">{activity.description}</p>
+                  <p className="text-foreground/80 leading-relaxed">{activity.description}</p>
                   {activity.image && (
                     <motion.div
                       whileHover={{ scale: 1.02 }}
-                      className="pl-6"
+                      className="mt-3"
                     >
                       <img
                         src={activity.image}
                         alt={activity.name}
-                        className="w-full max-w-md rounded-2xl shadow-md"
+                        className="w-full rounded-lg shadow-md border border-primary/20"
                       />
                     </motion.div>
                   )}
-                </div>
+                </motion.div>
               ))}
             </div>
           )}
 
           {/* Hotel info */}
           {hotel && (
-            <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-6 space-y-3">
-              <h3 className="text-xl font-semibold text-foreground flex items-center gap-2">
+            <div className="bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg p-6 space-y-3 border border-accent/30">
+              <h3 className="text-xl font-semibold text-accent flex items-center gap-2 uppercase tracking-wide">
                 <span className="text-2xl">🏨</span>
                 {hotel.name}
               </h3>
-              <p className="text-foreground/70 leading-relaxed">{hotel.description}</p>
+              <p className="text-foreground/80 leading-relaxed">{hotel.description}</p>
               {hotel.image && (
                 <motion.div whileHover={{ scale: 1.02 }}>
                   <img
                     src={hotel.image}
                     alt={hotel.name}
-                    className="w-full rounded-xl shadow-md"
+                    className="w-full rounded-lg shadow-md border border-primary/20"
                   />
                 </motion.div>
               )}

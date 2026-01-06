@@ -43,42 +43,42 @@
 }
 
 :root {
-  /* Nile River flowing narrative design - warm sandy to deep teal gradient */
-  --primary: oklch(0.45 0.08 200); /* Deep teal for primary actions */
-  --primary-foreground: oklch(0.96 0.01 60); /* Light sandy beige text */
-  --sidebar-primary: oklch(0.5 0.1 195);
-  --sidebar-primary-foreground: oklch(0.96 0.01 60);
-  --chart-1: oklch(0.65 0.12 195);
-  --chart-2: oklch(0.55 0.1 200);
-  --chart-3: oklch(0.45 0.08 205);
-  --chart-4: oklch(0.35 0.06 210);
-  --chart-5: oklch(0.25 0.04 215);
-  --radius: 1.5rem; /* Larger radius for organic, flowing feel */
-  --background: oklch(0.96 0.01 60); /* Soft sandy beige background */
-  --foreground: oklch(0.25 0.02 220); /* Deep indigo blue for text */
-  --card: oklch(0.98 0.005 55); /* Lighter sandy card background */
-  --card-foreground: oklch(0.25 0.02 220);
-  --popover: oklch(0.98 0.005 55);
-  --popover-foreground: oklch(0.25 0.02 220);
-  --secondary: oklch(0.85 0.04 40); /* Warm golden ochre */
-  --secondary-foreground: oklch(0.25 0.02 220);
-  --muted: oklch(0.9 0.02 50); /* Light warm beige */
-  --muted-foreground: oklch(0.5 0.03 210);
-  --accent: oklch(0.7 0.15 30); /* Sunset coral accent */
-  --accent-foreground: oklch(0.96 0.01 60);
+  /* Luxury Egyptian Mystery Design - Deep golds, blacks, and mystical tones */
+  --primary: oklch(0.25 0.12 45); /* Deep luxurious gold */
+  --primary-foreground: oklch(0.95 0.01 60); /* Cream/ivory text */
+  --sidebar-primary: oklch(0.3 0.15 50);
+  --sidebar-primary-foreground: oklch(0.95 0.01 60);
+  --chart-1: oklch(0.5 0.15 45);
+  --chart-2: oklch(0.4 0.12 50);
+  --chart-3: oklch(0.3 0.1 55);
+  --chart-4: oklch(0.2 0.08 60);
+  --chart-5: oklch(0.15 0.06 65);
+  --radius: 0.5rem; /* Sharp, elegant corners for luxury feel */
+  --background: oklch(0.08 0.02 0); /* Deep black background */
+  --foreground: oklch(0.92 0.01 60); /* Cream/ivory text */
+  --card: oklch(0.12 0.03 0); /* Very dark card background */
+  --card-foreground: oklch(0.92 0.01 60);
+  --popover: oklch(0.12 0.03 0);
+  --popover-foreground: oklch(0.92 0.01 60);
+  --secondary: oklch(0.35 0.15 45); /* Rich gold accent */
+  --secondary-foreground: oklch(0.95 0.01 60);
+  --muted: oklch(0.25 0.05 0); /* Dark muted */
+  --muted-foreground: oklch(0.65 0.02 60);
+  --accent: oklch(0.55 0.18 40); /* Bright gold accent */
+  --accent-foreground: oklch(0.08 0.02 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.85 0.02 50); /* Soft warm border */
-  --input: oklch(0.92 0.015 55);
-  --ring: oklch(0.5 0.1 195); /* Teal ring */
-  --sidebar: oklch(0.98 0.005 55);
-  --sidebar-foreground: oklch(0.25 0.02 220);
-  --sidebar-accent: oklch(0.9 0.02 50);
-  --sidebar-accent-foreground: oklch(0.25 0.02 220);
-  --sidebar-border: oklch(0.85 0.02 50);
-  --sidebar-ring: oklch(0.5 0.1 195);
+  --border: oklch(0.2 0.05 45); /* Dark gold border */
+  --input: oklch(0.15 0.03 0);
+  --ring: oklch(0.5 0.15 45); /* Gold ring */
+  --sidebar: oklch(0.12 0.03 0);
+  --sidebar-foreground: oklch(0.92 0.01 60);
+  --sidebar-accent: oklch(0.25 0.05 0);
+  --sidebar-accent-foreground: oklch(0.92 0.01 60);
+  --sidebar-border: oklch(0.2 0.05 45);
+  --sidebar-ring: oklch(0.5 0.15 45);
   
-  /* Custom font families */
+  /* Custom font families - more luxurious */
   --font-display: 'Playfair Display', serif;
   --font-sans: 'Raleway', 'Noto Sans SC', sans-serif;
   --font-script: 'Dancing Script', cursive;
