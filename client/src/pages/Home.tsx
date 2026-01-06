@@ -359,7 +359,13 @@ export default function Home() {
                 variant="secondary"
                 className="w-full text-lg px-6 py-4 rounded-lg shadow-lg hover:scale-105 transition-transform"
                 onClick={() => {
-                  alert('PDF下载功能将在实际部署时启用');
+                  const link = document.createElement('a');
+                  link.href = '/pdfs/Egypt_Comprehensive_Guide.pdf';
+                  link.download = 'Egypt_Comprehensive_Guide.pdf';
+                  link.style.display = 'none';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
                 }}
               >
                 <Download className="w-5 h-5 mr-2" />
@@ -376,7 +382,13 @@ export default function Home() {
                 variant="secondary"
                 className="w-full text-lg px-6 py-4 rounded-lg shadow-lg hover:scale-105 transition-transform"
                 onClick={() => {
-                  alert('PDF下载功能将在实际部署时启用');
+                  const link = document.createElement('a');
+                  link.href = '/pdfs/Egypt_Comprehensive_Guide.pdf';
+                  link.download = 'Egypt_Attractions_Guide.pdf';
+                  link.style.display = 'none';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
                 }}
               >
                 <Download className="w-5 h-5 mr-2" />

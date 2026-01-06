@@ -26,6 +26,7 @@ export interface Activity {
   name: string;
   description: string;
   image?: string;
+  images?: string[];
 }
 
 export interface Hotel {
@@ -123,18 +124,18 @@ export const itineraryData: DayItinerary[] = [
     activities: [
       {
         name: "吉萨金字塔群",
-        description: "近距离观车胡夫金字塔、哈夫拉金字塔和门卡拉金字塔,以及守护千年的狮身人面像。这是古代世界七大奇迹中唔一留存至今的瑰寶。",
-        image: "/images/mtAfsPqJuwsr.jpg"
+        description: "近距离观看胡夫金字塔、哈夫拉金字塔和门卡拉金字塔,以及守护千年的狮身人面像。这是古代世界七大奇迹中唯一留存至今的瑰宝。",
+        images: ["/images/mtAfsPqJuwsr.jpg", "https://images.unsplash.com/photo-1552832860-cfb67165eaf0?w=800", "https://images.unsplash.com/photo-1570829460005-c0222e070e9e?w=800"]
       },
       {
-        name: "大埃及博物館",
-        description: "参观世界上最大的单一文明博物館,欣赏图坦卡蒙法老的黄金面具和完整墓葡珍宝,以及雄伟的胡夫太阳船。",
-        image: "/images/YIyrvT7JKt0k.jpg"
+        name: "大埃及博物馆",
+        description: "参观世界上最大的单一文明博物馆,欣赏图坦卡蒙法老的黄金面具和完整墓葬珍宝,以及雄伟的胡夫太阳船。",
+        images: ["/images/YIyrvT7JKt0k.jpg", "https://images.unsplash.com/photo-1602088113235-229c19758e9f?w=800", "https://images.unsplash.com/photo-1570829460005-c0222e070e9e?w=800"]
       },
       {
         name: "哈里里市场",
-        description: "穿梭于开罗最古老、最热闹的集市,体验浓郆的阿拉伯风情,挑选独特的纪念品。",
-        image: "/images/liZCMoIVFPpj.jpg"
+        description: "穿梭于开罗最古老、最热闹的集市,体验浓郁的阿拉伯风情,挑选独特的纪念品。",
+        images: ["/images/liZCMoIVFPpj.jpg", "https://images.unsplash.com/photo-1555939594-58d7cb561404?w=800", "https://images.unsplash.com/photo-1609137144813-b6d0e6b3a9f3?w=800"]
       }
     ],
     hotel: {
@@ -147,7 +148,7 @@ export const itineraryData: DayItinerary[] = [
     day: 3,
     date: "2月13日",
     title: "开罗古城掠影与飞往南方明珠",
-    description: "在开罗的最后半天,我们将深入探索这座千年古城的宗教与市井文化。傲晨搞乘航班飞往阿斯旺。",
+    description: "在开罗的最后半天,我们将深入探索这座千年古城的宗教与市井文化。傍晚搭乘航班飞往阿斯旺。",
     flights: [
       {
         number: "SM 135",
@@ -171,7 +172,7 @@ export const itineraryData: DayItinerary[] = [
     activities: [
       {
         name: "萨拉丁城堡",
-        description: "登上穆卡塔姆山,参观ሒ世纪的宏伟城堡和穆罕默德·阿里清真寶,俳瞰开罗全景。",
+        description: "登上穆卡塔姆山,参观16世纪的宏伟城堡和穆罕默德·阿里清真寺,俯瞰开罗全景。",
         image: "/images/5O00eSRjj8Rf.jpg"
       },
       {
@@ -182,7 +183,7 @@ export const itineraryData: DayItinerary[] = [
     ],
     hotel: {
       name: "入住酒店: Pyramisa Island Hotel Aswan",
-      description: "位于尼罗河中征岛屿,被28英亩葵郆花园环绦,需乘船登岛,享受无与伦比的宁静",
+      description: "位于尼罗河中的岛屿,被28英亩葵花园环绕,需乘船登岛,享受无与伦比的宁静",
       image: "/images/pyramisa-island-aswan-hotel.png"
     }
   },
@@ -195,7 +196,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "菲莱神庙",
         description: "乘船前往阿吉勒基亚岛,参观被誉为'尼罗河上的珍珠'的神庙,欣赏供奉女神伊西斯的精美浮雕。",
-        image: "/images/Xo9Zei0ag6pK.jpg"
+        images: ["/images/Xo9Zei0ag6pK.jpg", "https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?w=800", "https://images.unsplash.com/photo-1570829460005-c0222e070e9e?w=800"]
       },
       {
         name: "阿斯旺大坝",
@@ -210,7 +211,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "尼罗河日落游船",
         description: "乘坐传统白色风帆船Felucca,在金色日落中缓缓漂流,体验埃及最浪漫的时刻。",
-        image: "/images/Cq9hJQfcCDuK.jpg"
+        images: ["/images/Cq9hJQfcCDuK.jpg", "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800", "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80&blend=https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?w=800&blend-mode=overlay"]
       }
     ],
     hotel: {
@@ -239,7 +240,7 @@ export const itineraryData: DayItinerary[] = [
     ],
     hotel: {
       name: "入住酒店: Steigenberger Resort Achti",
-      description: "五星级度假酒店,坐拥尼罗河东岸绝佳位置,可眉望河景与对岸的底比斯群山",
+      description: "五星级度假酒店,坐拥尼罗河东岸绝佳位置,可眺望河景与对岸的底比斯群山",
       image: "/images/steigenberger-achti-luxor-hotel.png"
     }
   },
@@ -253,7 +254,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "帝王谷",
         description: "深入荒芜山谷,探寻新王国时期法老们的秘密陵墓,观赏数千年前绘制的精美壁画。",
-        image: "/images/51kFS9Oonkl9.jpg"
+        images: ["/images/51kFS9Oonkl9.jpg", "https://images.unsplash.com/photo-1552832860-cfb67165eaf0?w=800", "https://images.unsplash.com/photo-1570829460005-c0222e070e9e?w=800"]
       },
       {
         name: "门农巨像",
@@ -286,12 +287,12 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "浮潜探索",
         description: "在赫尔嘎达红海珊瑚礁区浮潜,与各种海洋生物亲密接触,欣赏五彩斑斓的海底世界。",
-        image: "/images/red-sea-snorkeling.png"
+        images: ["/images/red-sea-snorkeling.png", "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800", "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800"]
       },
       {
         name: "沙漠冲沙探险",
         description: "乘坐四驱越野车在沙丘间驰骋,参观贝都因村落,骑骆驼欣赏沙漠日落,在星空下享用贝都因晚餐。",
-        image: "/images/JxuThLKcF1fu.jpg"
+        images: ["/images/JxuThLKcF1fu.jpg", "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800", "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800"]
       },
       {
         name: "酒店躺平",
@@ -315,7 +316,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "新开罗购物中心",
         description: "在现代化的新开罗购物中心进行最后的购物,这是一个集高端品牌、传统工艺品和埃及特产于一身的购物天堂。",
-        image: "/images/new-cairo-citystars-mall.jpg"
+        images: ["/images/new-cairo-citystars-mall.jpg", "https://images.unsplash.com/photo-1555939594-58d7cb561404?w=800", "https://images.unsplash.com/photo-1567521464027-f127ff144326?w=800"]
       }
     ]
   },

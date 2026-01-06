@@ -7,11 +7,13 @@
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import FlightCard from "./FlightCard";
+import ImageCarousel from "./ImageCarousel";
 
 interface Activity {
   name: string;
   description: string;
   image?: string;
+  images?: string[];
 }
 
 interface Hotel {
@@ -156,7 +158,11 @@ export default function DayCard({
                     {activity.name}
                   </h3>
                   <p className="text-foreground/80 leading-relaxed">{activity.description}</p>
-                  {activity.image && (
+                  {(activity.images && activity.images.length > 0) ? (
+                    <div className="mt-3">
+                      <ImageCarousel images={activity.images} title={activity.name} />
+                    </div>
+                  ) : activity.image ? (
                     <motion.div
                       whileHover={{ scale: 1.02 }}
                       className="mt-3"
@@ -167,7 +173,7 @@ export default function DayCard({
                         className="w-full rounded-lg shadow-md border border-primary/20"
                       />
                     </motion.div>
-                  )}
+                  ) : null}
                 </motion.div>
               ))}
             </div>
