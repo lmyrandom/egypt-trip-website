@@ -1,4 +1,4 @@
-/**
+/*
  * Home Page - Egypt Trip Itinerary (Luxury Mystery Edition)
  * Design Philosophy: Luxury Egyptian Mystery
  * - Deep black background with gold accents
@@ -100,104 +100,72 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.8 }}
           >
             <Button
               size="lg"
-              className="text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-7 rounded-lg shadow-2xl hover:shadow-accent/50 hover:scale-105 transition-all bg-accent text-accent-foreground w-full sm:w-auto"
-              onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+              className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg rounded-lg shadow-2xl"
             >
-              开始探索奇妙之旅
+              开始探索行程
             </Button>
           </motion.div>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2, repeat: Infinity, repeatType: "reverse" }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <div className="w-6 h-10 border-2 border-accent/50 rounded-full flex justify-center">
-            <motion.div 
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-1 h-2 bg-accent rounded-full mt-2"
-            />
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Introduction Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-primary/10 to-background">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="container max-w-4xl mx-auto"
-        >
-          <div className="bg-card/60 backdrop-blur-md rounded-lg p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl border border-primary/30">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8 text-foreground" style={{fontFamily: "'Playfair Display', serif"}}>
-            欢迎踏上这场奢华的埃及之旅
-          </h2>
-            <div className="space-y-3 sm:space-y-4 text-foreground/80 leading-relaxed text-sm sm:text-base">
-              <p>
-                亲爱的旅伴们,我们即将一同踏上一片古老而神秘的土地,亲身感受横跨七千年的璀璨文明。在这趟精心策划的旅程中,我们将站在雄伟的金字塔脚下,仰望法老的智慧与永恒;漫步于宏伟的神庙廊柱之间,聆听众神与英雄的古老传说;乘坐传统风帆船,在尼罗河的金色日落下悠然漂流;最后,我们还将在红海的蔚蓝怀抱中,与海豚共舞,享受悠闲的度假时光。
-              </p>
-              <p>
-                从开罗的千年古韵到阿斯旺的静谧风光,从卢克索的露天博物馆到赫尔嘎达的碧海金沙,每一站都经过精心安排。除赫尔嘎达躺平日外,全程配备中文导游讲解历史并陪同,全程Toyota HIACE商务车,确保您的舒适与安全。
-              </p>
-              <p className="font-semibold text-accent text-base sm:text-lg text-center mt-6 sm:mt-8">
-                请放松心情,带上您的好奇心与探索精神。让我们共同期待,在这片充满奇迹的土地上,创造属于我们自己的美好回忆!
-              </p>
-            </div>
-          </div>
         </motion.div>
       </section>
 
       {/* Itinerary Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-background to-primary/5">
-        <div className="container max-w-6xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 sm:mb-4 text-foreground"
-          >
-            详细行程安排
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-center text-foreground/60 mb-8 sm:mb-12 md:mb-16 text-sm sm:text-base md:text-lg"
-          >
-            每一天都精心设计,每一刻都值得期待
-          </motion.p>
-
+      <section className="py-16 sm:py-20 px-6 bg-gradient-to-b from-background to-primary/5">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="container max-w-5xl mx-auto"
+        >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-foreground mb-12 sm:mb-16">
+            完整行程安排
+          </h2>
           <div className="space-y-6 sm:space-y-8">
-            {itineraryData.map((day, index) => (
-              <DayCard key={day.day} {...day} index={index} />
+            {itineraryData.map((day: any, index: number) => (
+              <motion.div
+                key={day.day}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <DayCard {...day} />
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Travel Tips Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-primary/10 to-background">
-        <div className="container max-w-5xl mx-auto">
+      <section className="py-16 sm:py-20 px-6 bg-gradient-to-b from-primary/5 to-background">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="container max-w-5xl mx-auto"
+        >
+          <div className="mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center text-foreground mb-2">
+              出行准备清单
+            </h2>
+            <p className="text-center text-foreground/60 text-lg">
+              为了确保您有最舒适的旅行体验,请提前准备以下物品
+            </p>
+          </div>
+
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-card/60 backdrop-blur-md rounded-lg p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl border border-primary/30"
+            className="bg-card/50 backdrop-blur-sm rounded-lg p-6 sm:p-8 border border-primary/20 mb-8"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8 md:mb-12 text-foreground">
-              出行准备清单
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8">
+              📋 出行物品清单
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -276,6 +244,22 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-accent mt-1 flex-shrink-0">▸</span>
+                    <span>25美元现金(落地签证费用)</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-accent mt-1 flex-shrink-0">▸</span>
+                    <span>一次性牙刷、内裤、拖鞋</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-accent mt-1 flex-shrink-0">▸</span>
+                    <span>飞机枕头、耳塞、眼罩、口罩</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-accent mt-1 flex-shrink-0">▸</span>
+                    <span>褪黑素(调整时差)</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-accent mt-1 flex-shrink-0">▸</span>
                     <span>少量美元现金(用于小费)</span>
                   </li>
                 </ul>
@@ -293,16 +277,110 @@ export default function Home() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-accent mt-1 flex-shrink-0">•</span>
-                  <span><strong>交通工具:</strong> 全程Toyota HIACE商务车,舒适豪华</span>
+                  <span><strong>交通工具:</strong> 全程Toyota HIACE 8人豪华商务车,舒适宽敞,配备专业司机</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-accent mt-1 flex-shrink-0">•</span>
                   <span><strong>气候:</strong> 2月埃及气候宜人,白天温暖(25-28°C),早晚较凉(15-18°C),注意增减衣物</span>
                 </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent mt-1 flex-shrink-0">•</span>
+                  <span><strong>心情:</strong> 最重要的是带上愉快的心情,期待这场穿越时空的奇妙之旅!</span>
+                </li>
               </ul>
             </div>
           </motion.div>
-        </div>
+        </motion.div>
+      </section>
+
+      {/* Vehicle Section */}
+      <section className="py-16 sm:py-20 px-6 bg-gradient-to-b from-background to-primary/5">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="container max-w-4xl mx-auto"
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-foreground mb-12">豪华交通工具</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <img 
+                src="/images/toyota-hiace-luxury-8seater.png" 
+                alt="Toyota HIACE Luxury Van" 
+                className="rounded-lg shadow-2xl w-full h-auto"
+              />
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-2xl font-semibold text-accent mb-4">Toyota HIACE 8人豪华商务车</h3>
+              <p className="text-foreground/80 text-lg mb-4">
+                为了确保您的舒适体验,我们为全程配备了全新的Toyota HIACE 8人豪华商务车。这不是普通的旅游车,而是专为高端旅游团队设计的豪华交通工具。
+              </p>
+              <ul className="space-y-3 text-foreground/80">
+                <li className="flex items-start gap-3">
+                  <span className="text-accent flex-shrink-0">✓</span>
+                  <span>宽敞舒适的内部空间,每位乘客都有充足的活动空间</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent flex-shrink-0">✓</span>
+                  <span>高级空调系统,即使在炎热的埃及也能保持舒适温度</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent flex-shrink-0">✓</span>
+                  <span>专业司机,熟悉埃及道路,确保安全舒适的行程</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent flex-shrink-0">✓</span>
+                  <span>现代化设施,配备USB充电口和娱乐系统</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* New Cairo Shopping Section */}
+      <section className="py-16 sm:py-20 px-6 bg-gradient-to-b from-primary/5 to-background">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="container max-w-4xl mx-auto"
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-foreground mb-12">新开罗购物中心</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="order-2 md:order-1">
+              <h3 className="text-2xl font-semibold text-accent mb-4">返回开罗的最后购物机会</h3>
+              <p className="text-foreground/80 text-lg mb-4">
+                在返回香港前,我们将在新开罗现代化购物中心进行最后的购物。这是一个集高端品牌、传统工艺品和埃及特产于一身的购物天堂。
+              </p>
+              <ul className="space-y-3 text-foreground/80">
+                <li className="flex items-start gap-3">
+                  <span className="text-accent flex-shrink-0">🛍️</span>
+                  <span>国际品牌和埃及本地设计师品牌</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent flex-shrink-0">🎨</span>
+                  <span>传统纸莎草画和手工艺品</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent flex-shrink-0">🌿</span>
+                  <span>埃及香精和天然护肤品</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent flex-shrink-0">💎</span>
+                  <span>珍珠、宝石和黄金首饰</span>
+                </li>
+              </ul>
+            </div>
+            <div className="order-1 md:order-2">
+              <img 
+                src="/images/new-cairo-shopping-district.png" 
+                alt="New Cairo Shopping" 
+                className="rounded-lg shadow-2xl w-full h-auto"
+              />
+            </div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Download PDF Section */}
@@ -311,26 +389,44 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="container max-w-3xl mx-auto text-center"
+          className="container max-w-4xl mx-auto"
         >
-          <div className="bg-gradient-to-br from-accent to-primary rounded-lg p-12 shadow-2xl text-accent-foreground border border-accent/50">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              下载PDF行程小册子
-            </h2>
-            <p className="text-lg mb-8 opacity-90">
-              精美的PDF版本,方便您随时查阅和打印分享给旅伴
-            </p>
-            <Button
-              size="lg"
-              variant="secondary"
-              className="text-lg px-8 py-6 rounded-lg shadow-lg hover:scale-105 transition-transform"
-              onClick={() => {
-                alert('PDF下载功能将在实际部署时启用');
-              }}
-            >
-              <Download className="w-5 h-5 mr-2" />
-              下载PDF小册子
-            </Button>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12">下载行程文档</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-accent to-primary rounded-lg p-8 shadow-2xl text-accent-foreground border border-accent/50">
+              <h3 className="text-2xl font-bold mb-4">行程小册子</h3>
+              <p className="text-base mb-6 opacity-90">
+                完整的行程安排、酒店信息、交通详情和出行提示,方便随时查阅
+              </p>
+              <Button
+                size="lg"
+                variant="secondary"
+                className="w-full text-lg px-6 py-4 rounded-lg shadow-lg hover:scale-105 transition-transform"
+                onClick={() => {
+                  alert('PDF下载功能将在实际部署时启用');
+                }}
+              >
+                <Download className="w-5 h-5 mr-2" />
+                下载行程小册子
+              </Button>
+            </div>
+            <div className="bg-gradient-to-br from-primary to-accent rounded-lg p-8 shadow-2xl text-primary-foreground border border-primary/50">
+              <h3 className="text-2xl font-bold mb-4">景点导览指引</h3>
+              <p className="text-base mb-6 opacity-90">
+                专业导游小汪刘的深度景点解说,包含历史故事、观赏建议和合影地点
+              </p>
+              <Button
+                size="lg"
+                variant="secondary"
+                className="w-full text-lg px-6 py-4 rounded-lg shadow-lg hover:scale-105 transition-transform"
+                onClick={() => {
+                  alert('PDF下载功能将在实际部署时启用');
+                }}
+              >
+                <Download className="w-5 h-5 mr-2" />
+                下载景点导览指引
+              </Button>
+            </div>
           </div>
         </motion.div>
       </section>
@@ -341,8 +437,11 @@ export default function Home() {
           <p className="text-2xl font-semibold text-foreground mb-4">
             祝大家旅途愉快,新年快乐!
           </p>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground mb-4">
             西九龙厦门新年埃及行 · 2026年2月 · 奢华之旅
+          </p>
+          <p className="text-sm text-muted-foreground">
+            行程导游: 小汪刘 | 全程中文导游讲解 | Toyota HIACE豪华商务车
           </p>
         </div>
       </footer>

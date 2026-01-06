@@ -69,7 +69,7 @@ export const itineraryData: DayItinerary[] = [
           date: "2月11日"
         },
         duration: "9小时5分钟",
-        aircraft: "Boeing 777"
+        aircraft: "Airbus A380"
       },
       {
         number: "EK923",
@@ -87,7 +87,7 @@ export const itineraryData: DayItinerary[] = [
           date: "2月11日"
         },
         duration: "4小时15分钟",
-        aircraft: "Boeing 777"
+        aircraft: "Airbus A380"
       }
     ],
     activities: [
@@ -296,7 +296,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "酒店躺平",
         description: "在私人海滩的躺椅上读书,在清澈泳池中畅游,或在海滨酒吧点一杯饮品,静静欣赏海天一色。",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsZY40lJFJRsFHSKNQ0TFKgRavpIGx4pxaXQ&s"
+        image: "/images/red-sea-snorkeling.png"
       }
     ],
     hotel: {
@@ -313,10 +313,11 @@ export const itineraryData: DayItinerary[] = [
     activities: [
       {
         name: "新开罗购物",
-        description: "在现代化购物中心(如Cairo Festival City Mall)进行最后的购物,购买纸莎草画、香精和手工艺品作为纪念。"
+        description: "在现代化购物中心(如Cairo Festival City Mall)进行最后的购物,购买纸莎草画、香精和手工艺品作为纪念.",
+        image: "/images/new-cairo-shopping-district.png"
       }
     ],
-    images: ["/images/meDZIb95m8IN.jpg"]
+    images: ["/images/new-cairo-shopping-district.png"]
   },
   {
     day: 9,
@@ -340,7 +341,7 @@ export const itineraryData: DayItinerary[] = [
           date: "2月19日"
         },
         duration: "5小时30分钟",
-        aircraft: "Boeing 777"
+        aircraft: "Airbus A380"
       },
       {
         number: "EK380",
@@ -358,7 +359,7 @@ export const itineraryData: DayItinerary[] = [
           date: "2月19日"
         },
         duration: "8小时30分钟",
-        aircraft: "Boeing 777"
+        aircraft: "Airbus A380"
       }
     ]
   }
