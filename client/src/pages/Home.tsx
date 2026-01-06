@@ -141,9 +141,9 @@ export default function Home() {
           className="container max-w-4xl mx-auto"
         >
           <div className="bg-card/60 backdrop-blur-md rounded-lg p-8 md:p-12 shadow-2xl border border-primary/30">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-foreground">
-              欢迎踏上这场奢华的埃及之旅
-            </h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 text-foreground" style={{fontFamily: "'Playfair Display', serif"}}>
+            欢迎踏上这场奢华的埃及之旅
+          </h2>
             <div className="space-y-4 text-foreground/80 leading-relaxed">
               <p>
                 亲爱的旅伴们,我们即将一同踏上一片古老而神秘的土地,亲身感受横跨七千年的璀璨文明。在这趟精心策划的旅程中,我们将站在雄伟的金字塔脚下,仰望法老的智慧与永恒;漫步于宏伟的神庙廊柱之间,聆听众神与英雄的古老传说;乘坐传统风帆船,在尼罗河的金色日落下悠然漂流;最后,我们还将在红海的蔚蓝怀抱中,与海豚共舞,享受悠闲的度假时光。

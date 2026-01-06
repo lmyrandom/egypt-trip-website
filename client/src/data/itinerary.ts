@@ -68,7 +68,7 @@ export const itineraryData: DayItinerary[] = [
           time: "06:15",
           date: "2月11日"
         },
-        duration: "7小时25分钟",
+        duration: "8小时25分钟",
         aircraft: "Boeing 777"
       },
       {
@@ -86,7 +86,7 @@ export const itineraryData: DayItinerary[] = [
           time: "18:50",
           date: "2月11日"
         },
-        duration: "4小时30分钟",
+        duration: "5小时30分钟",
         aircraft: "Boeing 777"
       }
     ],
@@ -332,7 +332,7 @@ export const itineraryData: DayItinerary[] = [
           time: "06:00",
           date: "2月19日"
         },
-        duration: "4小时30分钟",
+        duration: "5小时30分钟",
         aircraft: "Boeing 777"
       },
       {
@@ -350,7 +350,7 @@ export const itineraryData: DayItinerary[] = [
           time: "22:30",
           date: "2月19日"
         },
-        duration: "7小时30分钟",
+        duration: "8小时30分钟",
         aircraft: "Boeing 777"
       }
     ]

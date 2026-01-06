@@ -78,10 +78,10 @@
   --sidebar-border: oklch(0.2 0.05 45);
   --sidebar-ring: oklch(0.5 0.15 45);
   
-  /* Custom font families - more luxurious */
-  --font-display: 'Playfair Display', serif;
+  /* Custom font families - luxury Egyptian theme */
+  --font-display: 'Playfair Display', 'Cormorant Garamond', serif;
   --font-sans: 'Raleway', 'Noto Sans SC', sans-serif;
-  --font-script: 'Dancing Script', cursive;
+  --font-serif: 'Cormorant Garamond', serif;
 }
 
 .dark {
@@ -128,9 +128,23 @@
     font-family: var(--font-sans);
   }
   
-  h1, h2, h3, h4, h5, h6 {
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  h3, h4 {
     font-family: var(--font-display);
     font-weight: 600;
+  }
+  h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 500;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
