@@ -105,7 +105,7 @@ export const itineraryData: DayItinerary[] = [
       }
     ],
     hotel: {
-      name: "Hilton Cairo Nile Maadi",
+      name: "入住酒店: Hilton Cairo Nile Maadi",
       description: "坐落于尼罗河畔,现代化设施配合河景,是舒适的休憩港湾",
       image: "/images/VfGLhY0aGgRw.jpg"
     },
@@ -267,7 +267,7 @@ export const itineraryData: DayItinerary[] = [
       }
     ],
     hotel: {
-      name: "Hilton Hurghada Plaza",
+      name: "入住酒店: Hilton Hurghada Plaza",
       description: "全包式度假酒店,拥有私人海滩和完善的休闲设施,开启海滨假日",
       image: "/images/Ane5xWG1Gw2l.jpg"
     }
@@ -300,7 +300,7 @@ export const itineraryData: DayItinerary[] = [
       }
     ],
     hotel: {
-      name: "Hilton Hurghada Plaza",
+      name: "入住酒店: Hilton Hurghada Plaza",
       description: "继续享受全包式海滨度假"
     }
   },
