@@ -125,17 +125,17 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "吉萨金字塔群",
         description: "近距离观看胡夫金字塔、哈夫拉金字塔和门卡拉金字塔,以及守护千年的狮身人面像。这是古代世界七大奇迹中唯一留存至今的瑰宝。",
-        images: ["/images/mtAfsPqJuwsr.jpg", "https://images.unsplash.com/photo-1552832860-cfb67165eaf0?w=800", "https://images.unsplash.com/photo-1570829460005-c0222e070e9e?w=800"]
+        images: ["/images/mtAfsPqJuwsr.jpg", "/images/giza-pyramids-sphinx.jpg", "/images/giza-pyramids-complex.jpg"]
       },
       {
         name: "大埃及博物馆",
         description: "参观世界上最大的单一文明博物馆,欣赏图坦卡蒙法老的黄金面具和完整墓葬珍宝,以及雄伟的胡夫太阳船。",
-        images: ["/images/YIyrvT7JKt0k.jpg", "https://images.unsplash.com/photo-1602088113235-229c19758e9f?w=800", "https://images.unsplash.com/photo-1570829460005-c0222e070e9e?w=800"]
+        images: ["/images/YIyrvT7JKt0k.jpg", "/images/museum-tutankhamun-display.jpg", "/images/museum-tutankhamun-mask.jpg"]
       },
       {
         name: "哈里里市场",
         description: "穿梭于开罗最古老、最热闹的集市,体验浓郁的阿拉伯风情,挑选独特的纪念品。",
-        images: ["/images/liZCMoIVFPpj.jpg", "https://images.unsplash.com/photo-1555939594-58d7cb561404?w=800", "https://images.unsplash.com/photo-1609137144813-b6d0e6b3a9f3?w=800"]
+        images: ["/images/liZCMoIVFPpj.jpg", "/images/khan-khalili-market-1.jpg", "/images/khan-khalili-shopping.jpg"]
       }
     ],
     hotel: {
@@ -196,7 +196,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "菲莱神庙",
         description: "乘船前往阿吉勒基亚岛,参观被誉为'尼罗河上的珍珠'的神庙,欣赏供奉女神伊西斯的精美浮雕。",
-        images: ["/images/Xo9Zei0ag6pK.jpg", "https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?w=800", "https://images.unsplash.com/photo-1570829460005-c0222e070e9e?w=800"]
+        images: ["/images/Xo9Zei0ag6pK.jpg", "/images/philae-temple-1.jpg", "/images/philae-temple-aerial.jpg"]
       },
       {
         name: "阿斯旺大坝",
@@ -211,7 +211,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "尼罗河日落游船",
         description: "乘坐传统白色风帆船Felucca,在金色日落中缓缓漂流,体验埃及最浪漫的时刻。",
-        images: ["/images/Cq9hJQfcCDuK.jpg", "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800", "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80&blend=https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?w=800&blend-mode=overlay"]
+        images: ["/images/Cq9hJQfcCDuK.jpg", "/images/philae-temple-2.jpg", "/images/philae-temple-1.jpg"]
       }
     ],
     hotel: {
@@ -254,7 +254,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "帝王谷",
         description: "深入荒芜山谷,探寻新王国时期法老们的秘密陵墓,观赏数千年前绘制的精美壁画。",
-        images: ["/images/51kFS9Oonkl9.jpg", "https://images.unsplash.com/photo-1552832860-cfb67165eaf0?w=800", "https://images.unsplash.com/photo-1570829460005-c0222e070e9e?w=800"]
+        images: ["/images/51kFS9Oonkl9.jpg", "/images/valley-of-kings-1.jpg", "/images/valley-of-kings-tombs.jpg"]
       },
       {
         name: "门农巨像",
@@ -287,12 +287,12 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "浮潜探索",
         description: "在赫尔嘎达红海珊瑚礁区浮潜,与各种海洋生物亲密接触,欣赏五彩斑斓的海底世界。",
-        images: ["/images/red-sea-snorkeling.png", "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800", "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800"]
+        images: ["/images/red-sea-snorkeling.png", "/images/red-sea-snorkeling-1.jpg", "/images/red-sea-coral-reef.jpg"]
       },
       {
         name: "沙漠冲沙探险",
         description: "乘坐四驱越野车在沙丘间驰骋,参观贝都因村落,骑骆驼欣赏沙漠日落,在星空下享用贝都因晚餐。",
-        images: ["/images/JxuThLKcF1fu.jpg", "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800", "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800"]
+        images: ["/images/JxuThLKcF1fu.jpg", "/images/desert-safari-camel.jpg", "/images/bedouin-camp.jpg"]
       },
       {
         name: "酒店躺平",
@@ -316,7 +316,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "新开罗购物中心",
         description: "在现代化的新开罗购物中心进行最后的购物,这是一个集高端品牌、传统工艺品和埃及特产于一身的购物天堂。",
-        images: ["/images/new-cairo-citystars-mall.jpg", "https://images.unsplash.com/photo-1555939594-58d7cb561404?w=800", "https://images.unsplash.com/photo-1567521464027-f127ff144326?w=800"]
+        images: ["/images/new-cairo-citystars-mall.jpg", "/images/khan-khalili-market-2.jpg", "/images/desert-safari-jeep.jpg"]
       }
     ]
   },
