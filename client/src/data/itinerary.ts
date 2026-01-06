@@ -205,7 +205,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "老瀑布酒店下午茶",
         description: "在阿加莎·克里斯蒂创作《尼罗河上的惨案》的传奇酒店,享用优雅的英式下午茶。",
-        image: "/images/old-cataract-hotel-aswan.png"
+        image: "https://m.ahstatic.com/is/image/accorhotels/aja_p_6104-36?fmt=jpg&op_usm=1.75,0.3,2,0&resMode=sharp2&iccEmbed=true&icc=sRGB&dpr=on,1.5&wid=335&qlt=80"
       },
       {
         name: "尼罗河日落游船",
@@ -281,7 +281,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "出海追逐海豚",
         description: "乘船前往红海最美的海域,在清澈的海水中与野生海豚亲密接触,欣赏大自然的简洁与伟大。",
-        image: "/images/red-sea-dolphins-spotting.png"
+        image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/12/e2/58/95.jpg"
       },
       {
         name: "浮潜探索",
@@ -296,7 +296,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "酒店躺平",
         description: "在私人海滩的躺椅上读书,在清澈泳池中畅游,或在海滨酒吧点一杯饮品,静静欣赏海天一色。",
-        image: "/images/dPkXETI1nZqz.jpg"
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsZY40lJFJRsFHSKNQ0TFKgRavpIGx4pxaXQ&s"
       }
     ],
     hotel: {
