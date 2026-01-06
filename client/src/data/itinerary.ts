@@ -296,7 +296,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "酒店躺平",
         description: "在私人海滩的躺椅上读书,在清澈泳池中畅游,或在海滨酒吧点一杯饮品,静静欣赏海天一色。",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsZY40lJFJRsFHSKNQ0TFKgRavpIGx4pxaXQ&s"
+        image: "https://hiltonresort.hotelshurghada.com/data/Photos/1080x700w/16874/1687459/1687459488/hurghada-swiss-inn-resort-hurghada-photo-6.JPEG"
       }
     ],
     hotel: {
@@ -310,7 +310,7 @@ export const itineraryData: DayItinerary[] = [
     title: "告别红海,返回开罗",
     description: "享受最后一个悠闲的上午后,驱车5小时返回开罗,再次穿越壮丽的东部沙漠。",
     transport: "乘车返回开罗,约5小时,沿途欣赏红海海岸线、沙漠山脉和笔直公路构成的壮美画卷",
-    images: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsZY40lJFJRsFHSKNQ0TFKgRavpIGx4pxaXQ&s"]
+    images: ["/images/red-sea-desert-landscape.png"]
   },
   {
     day: 9,
