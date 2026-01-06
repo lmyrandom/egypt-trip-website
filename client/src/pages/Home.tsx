@@ -347,7 +347,7 @@ export default function Home() {
           viewport={{ once: true }}
           className="container max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12">下载行程文档</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12">查看小汪刘准备的贴心小信息</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-accent to-primary rounded-lg p-8 shadow-2xl text-white border border-accent/50">
               <h3 className="text-2xl font-bold mb-4">行程小册子</h3>
@@ -363,7 +363,7 @@ export default function Home() {
                 }}
               >
                 <Download className="w-5 h-5 mr-2" />
-                查看小汪刘准备的贴心小信息
+                查看
               </Button>
             </div>
             <div className="bg-gradient-to-br from-primary to-accent rounded-lg p-8 shadow-2xl text-white border border-primary/50">
@@ -380,7 +380,7 @@ export default function Home() {
                 }}
               >
                 <Download className="w-5 h-5 mr-2" />
-                查看小汪刘准备的贴心小信息
+                查看
               </Button>
             </div>
           </div>
