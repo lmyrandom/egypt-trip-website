@@ -1,10 +1,10 @@
 /**
  * ImageCarousel Component - Luxury Egyptian Mystery Edition
  * Design: Swipeable image carousel with navigation dots
- * Allows users to browse multiple images without increasing page height
+ * Optimized for performance with image preloading
  */
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -23,11 +23,29 @@ export default function ImageCarousel({
 }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [loadedImages, setLoadedImages] = useState<number[]>([0]);
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
 
   if (!images || images.length === 0) {
     return null;
   }
+
+  // Preload adjacent images for smooth transitions
+  useEffect(() => {
+    const nextIndex = (currentIndex + 1) % images.length;
+    const prevIndex = (currentIndex - 1 + images.length) % images.length;
+    
+    const indicesToPreload = [nextIndex, prevIndex];
+    indicesToPreload.forEach(index => {
+      if (!loadedImages.includes(index)) {
+        const img = new Image();
+        img.src = images[index];
+        img.onload = () => {
+          setLoadedImages(prev => [...prev, index]);
+        };
+      }
+    });
+  }, [currentIndex, images, loadedImages]);
 
   // If only one image, don't show carousel controls
   if (images.length === 1) {
@@ -40,7 +58,8 @@ export default function ImageCarousel({
           src={images[0]}
           alt={title}
           className="w-full h-full object-cover"
-          loading="lazy"
+          loading="eager"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity" />
       </motion.div>
@@ -84,7 +103,7 @@ export default function ImageCarousel({
     callback();
   };
 
-  const slideVariants = {
+  const slideVariants = useMemo(() => ({
     enter: (dir: number) => ({
       x: dir > 0 ? 1000 : -1000,
       opacity: 0
@@ -99,7 +118,7 @@ export default function ImageCarousel({
       x: dir < 0 ? 1000 : -1000,
       opacity: 0
     })
-  };
+  }), []);
 
   return (
     <div className="relative w-full">
@@ -120,7 +139,8 @@ export default function ImageCarousel({
               opacity: { duration: 0.2 }
             }}
             className="absolute inset-0 w-full h-full object-cover"
-            loading="lazy"
+            loading="eager"
+            decoding="async"
           />
         </AnimatePresence>
 

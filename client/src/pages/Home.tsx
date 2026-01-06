@@ -359,17 +359,11 @@ export default function Home() {
                 variant="secondary"
                 className="w-full text-lg px-6 py-4 rounded-lg shadow-lg hover:scale-105 transition-transform"
                 onClick={() => {
-                  const link = document.createElement('a');
-                  link.href = '/pdfs/Egypt_Comprehensive_Guide.pdf';
-                  link.download = 'Egypt_Comprehensive_Guide.pdf';
-                  link.style.display = 'none';
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
+                  window.open('/pdfs/Egypt_Comprehensive_Guide.pdf', '_blank');
                 }}
               >
                 <Download className="w-5 h-5 mr-2" />
-                下载行程小册子
+                查看行程小册子
               </Button>
             </div>
             <div className="bg-gradient-to-br from-primary to-accent rounded-lg p-8 shadow-2xl text-primary-foreground border border-primary/50">
@@ -382,17 +376,11 @@ export default function Home() {
                 variant="secondary"
                 className="w-full text-lg px-6 py-4 rounded-lg shadow-lg hover:scale-105 transition-transform"
                 onClick={() => {
-                  const link = document.createElement('a');
-                  link.href = '/pdfs/Egypt_Comprehensive_Guide.pdf';
-                  link.download = 'Egypt_Attractions_Guide.pdf';
-                  link.style.display = 'none';
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
+                  window.open('/pdfs/Egypt_Attractions_Guide.pdf', '_blank');
                 }}
               >
                 <Download className="w-5 h-5 mr-2" />
-                下载景点导览指引
+                查看景点导览指引
               </Button>
             </div>
           </div>
