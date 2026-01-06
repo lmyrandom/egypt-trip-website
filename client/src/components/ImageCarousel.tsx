@@ -106,8 +106,10 @@ export default function ImageCarousel({
       {/* Carousel container */}
       <div className="relative overflow-hidden rounded-lg shadow-lg aspect-[4/3] border border-primary/20 bg-black">
         <AnimatePresence initial={false} custom={direction} mode="wait">
-          <motion.div
-            key={currentIndex}
+          <motion.img
+            key={`carousel-${currentIndex}`}
+            src={images[currentIndex]}
+            alt={`${title} - Image ${currentIndex + 1}`}
             custom={direction}
             variants={slideVariants}
             initial="enter"
@@ -117,22 +119,18 @@ export default function ImageCarousel({
               x: { type: 'spring', stiffness: 300, damping: 30 },
               opacity: { duration: 0.2 }
             }}
-            className="absolute inset-0"
-          >
-            <img
-              src={images[currentIndex]}
-              alt={`${title} - Image ${currentIndex + 1}`}
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity" />
-          </motion.div>
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
         </AnimatePresence>
+
+        {/* Overlay gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity pointer-events-none" />
 
         {/* Navigation buttons */}
         <button
           onClick={() => handleManualInteraction(handlePrevious)}
-          className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/80 text-white p-2 rounded-full transition-all duration-300 touch-none"
+          className="absolute left-3 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/80 text-white p-2 rounded-full transition-all duration-300 touch-none"
           aria-label="Previous image"
         >
           <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -140,14 +138,14 @@ export default function ImageCarousel({
 
         <button
           onClick={() => handleManualInteraction(handleNext)}
-          className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/80 text-white p-2 rounded-full transition-all duration-300 touch-none"
+          className="absolute right-3 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/80 text-white p-2 rounded-full transition-all duration-300 touch-none"
           aria-label="Next image"
         >
           <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>
 
         {/* Image counter */}
-        <div className="absolute top-3 right-3 z-10 bg-black/60 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-semibold">
+        <div className="absolute top-3 right-3 z-20 bg-black/60 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-semibold">
           {currentIndex + 1} / {images.length}
         </div>
       </div>
