@@ -359,7 +359,7 @@ export default function Home() {
                 variant="secondary"
                 className="w-full text-lg px-6 py-4 rounded-lg shadow-lg hover:scale-105 transition-transform"
                 onClick={() => {
-                  window.open('/pdfs/Egypt_Comprehensive_Guide.pdf', '_blank');
+                  window.open('/pdfs/Egypt_Attractions_Guide.pdf', '_blank');
                 }}
               >
                 <Download className="w-5 h-5 mr-2" />
@@ -376,7 +376,7 @@ export default function Home() {
                 variant="secondary"
                 className="w-full text-lg px-6 py-4 rounded-lg shadow-lg hover:scale-105 transition-transform"
                 onClick={() => {
-                  window.open('/pdfs/Egypt_Attractions_Guide.pdf', '_blank');
+                  window.open('/pdfs/Egypt_Comprehensive_Guide.pdf', '_blank');
                 }}
               >
                 <Download className="w-5 h-5 mr-2" />
