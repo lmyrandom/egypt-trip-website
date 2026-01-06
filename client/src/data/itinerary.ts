@@ -68,7 +68,7 @@ export const itineraryData: DayItinerary[] = [
           time: "06:15",
           date: "2月11日"
         },
-        duration: "8小时25分钟",
+        duration: "9小时5分钟",
         aircraft: "Boeing 777"
       },
       {
@@ -86,7 +86,7 @@ export const itineraryData: DayItinerary[] = [
           time: "18:50",
           date: "2月11日"
         },
-        duration: "5小时30分钟",
+        duration: "4小时15分钟",
         aircraft: "Boeing 777"
       }
     ],
@@ -123,25 +123,31 @@ export const itineraryData: DayItinerary[] = [
     activities: [
       {
         name: "吉萨金字塔群",
-        description: "近距离观赏胡夫金字塔、哈夫拉金字塔和门卡拉金字塔,以及守护千年的狮身人面像。这是古代世界七大奇迹中唯一留存至今的瑰宝。",
+        description: "近距离观车胡夫金字塔、哈夫拉金字塔和门卡拉金字塔,以及守护千年的狮身人面像。这是古代世界七大奇迹中唔一留存至今的瑰寶。",
         image: "/images/mtAfsPqJuwsr.jpg"
       },
       {
-        name: "大埃及博物馆",
-        description: "参观世界上最大的单一文明博物馆,欣赏图坦卡蒙法老的黄金面具和完整墓葬珍宝,以及雄伟的胡夫太阳船。",
+        name: "大埃及博物館",
+        description: "参观世界上最大的单一文明博物館,欣赏图坦卡蒙法老的黄金面具和完整墓葡珍宝,以及雄伟的胡夫太阳船。",
         image: "/images/YIyrvT7JKt0k.jpg"
+      },
+      {
+        name: "哈里里市场",
+        description: "穿梭于开罗最古老、最热闹的集市,体验浓郆的阿拉伯风情,挑选独特的纪念品。",
+        image: "/images/liZCMoIVFPpj.jpg"
       }
     ],
     hotel: {
-      name: "Hilton Cairo Nile Maadi",
-      description: "继续入住尼罗河畔酒店"
+      name: "入住酒店: Hilton Cairo Nile Maadi",
+      description: "希尔顿开罗尼罗酒店是一家五星级豪华酒店,坐落于尼罗河疕,提供了现代化设施与优雅的住宿体验。",
+      image: "/images/hilton-cairo-nile-maadi-hotel.png"
     }
   },
   {
     day: 3,
     date: "2月13日",
     title: "开罗古城掠影与飞往南方明珠",
-    description: "在开罗的最后半天,我们将深入探索这座千年古城的宗教与市井文化。傍晚搭乘航班飞往阿斯旺。",
+    description: "在开罗的最后半天,我们将深入探索这座千年古城的宗教与市井文化。傲晨搞乘航班飞往阿斯旺。",
     flights: [
       {
         number: "SM 135",
@@ -164,25 +170,20 @@ export const itineraryData: DayItinerary[] = [
     ],
     activities: [
       {
-        name: "哈里里市场",
-        description: "穿梭于开罗最古老、最热闹的集市,体验浓郁的阿拉伯风情,挑选独特的纪念品。",
-        image: "/images/liZCMoIVFPpj.jpg"
-      },
-      {
         name: "萨拉丁城堡",
-        description: "登上穆卡塔姆山,参观12世纪的宏伟城堡和穆罕默德·阿里清真寺,俯瞰开罗全景。",
+        description: "登上穆卡塔姆山,参观ሒ世纪的宏伟城堡和穆罕默德·阿里清真寶,俳瞰开罗全景。",
         image: "/images/5O00eSRjj8Rf.jpg"
       },
       {
-        name: "洞穴教堂",
-        description: "探访完全在山体中开凿的圣西蒙修道院,感受科普特基督徒的坚定信仰。",
+        name: "洞窟教堂",
+        description: "探访完全在山体中开凿的圣西蒙修道院,感受科普特基督教徒的坚定信仰。",
         image: "/images/Vz4oh7ubLhJE.jpg"
       }
     ],
     hotel: {
-      name: "Pyramisa Island Hotel Aswan",
-      description: "位于尼罗河中央岛屿,被28英亩葱郁花园环绕,需乘船登岛,享受无与伦比的宁静",
-      image: "/images/xOQwky5Uj23O.jpg"
+      name: "入住酒店: Pyramisa Island Hotel Aswan",
+      description: "位于尼罗河中征岛屿,被28英亩葵郆花园环绦,需乘船登岛,享受无与伦比的宁静",
+      image: "/images/pyramisa-island-aswan-hotel.png"
     }
   },
   {
@@ -204,7 +205,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "老瀑布酒店下午茶",
         description: "在阿加莎·克里斯蒂创作《尼罗河上的惨案》的传奇酒店,享用优雅的英式下午茶。",
-        image: "/images/m3WM0uPpXeab.jpg"
+        image: "/images/old-cataract-hotel-aswan.png"
       },
       {
         name: "尼罗河日落游船",
@@ -213,8 +214,9 @@ export const itineraryData: DayItinerary[] = [
       }
     ],
     hotel: {
-      name: "Pyramisa Island Hotel Aswan",
-      description: "继续享受岛屿酒店的宁静"
+      name: "入住酒店: Pyramisa Island Hotel Aswan",
+      description: "继续享受岛屿酒店的宁静与优雅",
+      image: "/images/pyramisa-island-aswan-hotel.png"
     }
   },
   {
@@ -236,9 +238,9 @@ export const itineraryData: DayItinerary[] = [
       }
     ],
     hotel: {
-      name: "Steigenberger Resort Achti",
-      description: "五星级度假酒店,坐拥尼罗河东岸绝佳位置,可眺望河景与对岸的底比斯群山",
-      image: "/images/enrGwUCwBobw.jpg"
+      name: "入住酒店: Steigenberger Resort Achti",
+      description: "五星级度假酒店,坐拥尼罗河东岸绝佳位置,可眉望河景与对岸的底比斯群山",
+      image: "/images/steigenberger-achti-luxor-hotel.png"
     }
   },
   {
@@ -277,9 +279,14 @@ export const itineraryData: DayItinerary[] = [
     description: "彻底告别古迹的厚重,全身心投入红海的蔚蓝怀抱。全包式酒店提供一切所需,唯一的'任务'就是放松和享受。",
     activities: [
       {
-        name: "出海追逐海豚与浮潜",
-        description: "乘船前往'海豚之家',在自然栖息地与海洋精灵相遇,在色彩斑斓的珊瑚礁区浮潜探索海底世界。",
-        image: "/images/red-sea-dolphins.png"
+        name: "出海追逐海豚",
+        description: "乘船前往红海最美的海域,在清澈的海水中与野生海豚亲密接触,欣赏大自然的简洁与伟大。",
+        image: "/images/red-sea-dolphins-spotting.png"
+      },
+      {
+        name: "浮潜探索",
+        description: "在赫尔嘎达红海珊瑚礁区浮潜,与各种海洋生物亲密接触,欣赏五彩斑斓的海底世界。",
+        image: "/images/red-sea-snorkeling.png"
       },
       {
         name: "沙漠冲沙探险",
