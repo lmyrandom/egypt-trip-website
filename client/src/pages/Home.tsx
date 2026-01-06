@@ -62,10 +62,10 @@ export default function Home() {
               <span className="text-accent text-sm font-semibold uppercase tracking-widest">奢华之旅</span>
             </div>
             
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 drop-shadow-2xl">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 drop-shadow-2xl leading-tight">
               西九龙厦门新年埃及行
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl text-foreground/80 font-light mb-4">
+            <p className="text-base sm:text-lg md:text-2xl lg:text-3xl text-foreground/80 font-light mb-4">
               穿越时空,探寻法老的永恒秘密
             </p>
           </motion.div>
@@ -74,27 +74,27 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="flex flex-wrap justify-center gap-4 mb-12"
+            className="flex flex-col sm:flex-wrap sm:flex-row justify-center gap-3 sm:gap-4 mb-8 sm:mb-12"
           >
-            <div className="bg-card/80 backdrop-blur-md rounded-lg px-6 py-4 shadow-xl border border-primary/30 flex items-center gap-3">
-              <Calendar className="w-5 h-5 text-accent" />
-              <div className="text-left">
+            <div className="bg-card/80 backdrop-blur-md rounded-lg px-4 sm:px-6 py-3 sm:py-4 shadow-xl border border-primary/30 flex items-center gap-3 w-full sm:w-auto">
+              <Calendar className="w-5 h-5 text-accent flex-shrink-0" />
+              <div className="text-left min-w-0">
                 <div className="text-xs text-muted-foreground uppercase tracking-wide">出发日期</div>
-                <div className="font-semibold text-foreground">2026年2月11日</div>
+                <div className="font-semibold text-foreground text-sm sm:text-base">2026年2月11日</div>
               </div>
             </div>
-            <div className="bg-card/80 backdrop-blur-md rounded-lg px-6 py-4 shadow-xl border border-primary/30 flex items-center gap-3">
-              <Plane className="w-5 h-5 text-accent" />
-              <div className="text-left">
+            <div className="bg-card/80 backdrop-blur-md rounded-lg px-4 sm:px-6 py-3 sm:py-4 shadow-xl border border-primary/30 flex items-center gap-3 w-full sm:w-auto">
+              <Plane className="w-5 h-5 text-accent flex-shrink-0" />
+              <div className="text-left min-w-0">
                 <div className="text-xs text-muted-foreground uppercase tracking-wide">行程天数</div>
-                <div className="font-semibold text-foreground">9天8晚</div>
+                <div className="font-semibold text-foreground text-sm sm:text-base">9天8晚</div>
               </div>
             </div>
-            <div className="bg-card/80 backdrop-blur-md rounded-lg px-6 py-4 shadow-xl border border-primary/30 flex items-center gap-3">
-              <MapPin className="w-5 h-5 text-accent" />
-              <div className="text-left">
+            <div className="bg-card/80 backdrop-blur-md rounded-lg px-4 sm:px-6 py-3 sm:py-4 shadow-xl border border-primary/30 flex items-center gap-3 w-full sm:w-auto">
+              <MapPin className="w-5 h-5 text-accent flex-shrink-0" />
+              <div className="text-left min-w-0">
                 <div className="text-xs text-muted-foreground uppercase tracking-wide">目的地</div>
-                <div className="font-semibold text-foreground">埃及</div>
+                <div className="font-semibold text-foreground text-sm sm:text-base">埃及</div>
               </div>
             </div>
           </motion.div>
@@ -106,7 +106,7 @@ export default function Home() {
           >
             <Button
               size="lg"
-              className="text-lg px-10 py-7 rounded-lg shadow-2xl hover:shadow-accent/50 hover:scale-105 transition-all bg-accent text-accent-foreground"
+              className="text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-7 rounded-lg shadow-2xl hover:shadow-accent/50 hover:scale-105 transition-all bg-accent text-accent-foreground w-full sm:w-auto"
               onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
             >
               开始探索奇妙之旅
@@ -141,7 +141,7 @@ export default function Home() {
           className="container max-w-4xl mx-auto"
         >
           <div className="bg-card/60 backdrop-blur-md rounded-lg p-8 md:p-12 shadow-2xl border border-primary/30">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 text-foreground" style={{fontFamily: "'Playfair Display', serif"}}>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8 text-foreground" style={{fontFamily: "'Playfair Display', serif"}}>
             欢迎踏上这场奢华的埃及之旅
           </h2>
             <div className="space-y-4 text-foreground/80 leading-relaxed">

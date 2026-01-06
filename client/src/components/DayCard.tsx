@@ -72,35 +72,35 @@ export default function DayCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-stretch mb-24`}
+      className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-4 sm:gap-6 md:gap-8 items-stretch mb-12 sm:mb-16 md:mb-24`}
     >
       {/* Day number badge - luxury gold styling */}
       <div className="flex-shrink-0 flex items-center justify-center md:items-start">
         <motion.div
           whileHover={{ scale: 1.05 }}
-          className="w-28 h-28 md:w-32 md:h-32 rounded-lg bg-gradient-to-br from-accent via-primary to-accent flex items-center justify-center shadow-2xl border border-accent/50"
+          className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-lg bg-gradient-to-br from-accent via-primary to-accent flex items-center justify-center shadow-2xl border border-accent/50"
         >
           <div className="text-center">
-            <div className="text-sm md:text-base font-semibold text-primary-foreground tracking-widest">DAY</div>
-            <div className="text-5xl md:text-6xl font-bold text-accent-foreground">{day}</div>
+            <div className="text-xs sm:text-sm md:text-base font-semibold text-primary-foreground tracking-widest">DAY</div>
+            <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent-foreground">{day}</div>
           </div>
         </motion.div>
       </div>
 
       {/* Content card - luxury dark styling */}
-      <Card className="flex-1 p-6 md:p-8 shadow-2xl bg-card/80 backdrop-blur-sm border border-primary/30 rounded-lg">
-        <div className="space-y-6">
+      <Card className="flex-1 p-4 sm:p-6 md:p-8 shadow-2xl bg-card/80 backdrop-blur-sm border border-primary/30 rounded-lg">
+        <div className="space-y-4 sm:space-y-5 md:space-y-6">
           {/* Header */}
-          <div className="border-b border-primary/20 pb-4">
+          <div className="border-b border-primary/20 pb-3 sm:pb-4">
             <div className="text-xs text-accent uppercase tracking-widest font-semibold mb-2">{date}</div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">{title}</h2>
-            <p className="text-base md:text-lg text-foreground/80 leading-relaxed">{description}</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2 sm:mb-3">{title}</h2>
+            <p className="text-sm sm:text-base md:text-lg text-foreground/80 leading-relaxed">{description}</p>
           </div>
 
           {/* Flights */}
           {flights.length > 0 && (
-            <div className="space-y-3">
-              <h3 className="text-lg font-semibold text-accent uppercase tracking-wide">✈️ 航班信息</h3>
+            <div className="space-y-2 sm:space-y-3">
+              <h3 className="text-base sm:text-lg font-semibold text-accent uppercase tracking-wide">✏️ 航班信息</h3>
               {flights.map((flight, idx) => (
                 <FlightCard key={idx} flight={flight} index={idx} />
               ))}
@@ -109,9 +109,9 @@ export default function DayCard({
 
           {/* Transport info */}
           {transport && (
-            <div className="bg-primary/20 rounded-lg p-4 border-l-4 border-accent">
-              <p className="text-sm font-medium text-foreground flex items-center gap-2">
-                <span className="text-lg">🚗</span>
+            <div className="bg-primary/20 rounded-lg p-3 sm:p-4 border-l-4 border-accent">
+              <p className="text-xs sm:text-sm font-medium text-foreground flex items-center gap-2">
+                <span className="text-base sm:text-lg flex-shrink-0">🚗</span>
                 <span>{transport}</span>
               </p>
             </div>
@@ -119,18 +119,18 @@ export default function DayCard({
 
           {/* Images grid */}
           {images.length > 0 && (
-            <div className={`grid gap-4 ${images.length === 1 ? 'grid-cols-1' : images.length === 2 ? 'grid-cols-2' : 'grid-cols-2 md:grid-cols-3'}`}>
+            <div className={`grid gap-2 sm:gap-3 md:gap-4 ${images.length === 1 ? 'grid-cols-1' : images.length === 2 ? 'grid-cols-2' : 'grid-cols-2 md:grid-cols-3'}`}>
               {images.map((img, idx) => (
                 <motion.div
                   key={idx}
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
-                  className="relative overflow-hidden rounded-lg shadow-lg aspect-[4/3] border border-primary/20"
+                  className="relative overflow-hidden rounded-lg shadow-lg aspect-[4/3] border border-primary/20 touch-none"
                 >
                   <img
                     src={img}
                     alt={`${title} - Image ${idx + 1}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover" loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity" />
                 </motion.div>
